@@ -15,7 +15,7 @@ export default {
     siteTitle: "esFerDev's Docs",
     outline: "deep",
     nav: [
-      { text: "Get Started", link: "/getstarted" },
+      { text: "Shop", link: "https://esferdev.tebex.io/" },
       { text: "About", link: "/about" },
       { text: "Docs", link: "/api" },
       { text: "Team", link: "/team" },
