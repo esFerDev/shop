@@ -13,11 +13,11 @@ import {
 
 const developers = [
     {
-        avatar: 'https://avatars.githubusercontent.com/u/10902965?v=4',
-        name: 'Bytesizd',
+        avatar: 'https://avatars.githubusercontent.com/u/58149189?s=96&v=4',
+        name: 'esFerDev',
         title: 'Developer',
         links: [
-            { icon: 'github', link: 'https://github.com/AndrewR3K' },
+            { icon: 'github', link: 'https://github.com/esFerDev' },
         ]
     }
 ]
