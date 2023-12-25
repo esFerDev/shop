@@ -4,8 +4,8 @@ import { defineConfig } from "vite";
 //default options
 var options = {
   previewLength: 62,
-  buttonLabel: "Search",
-  placeholder: "Search docs",
+  buttonLabel: "Buscar",
+  placeholder: "Buscar...",
 };
 
 export default defineConfig({
