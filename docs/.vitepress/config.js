@@ -21,7 +21,7 @@ export default {
       { text: "Team", link: "/team" },
     ],
     socialLinks: [
-      { icon: "github", link: "https://github.com/AndrewR3K/vitepress-boilerplate" },
+      //{ icon: "github", link: "https://github.com/AndrewR3K/vitepress-boilerplate" },
       { icon: "discord", link: "https://discord.gg/invite/c3ZscGYpZH" },
     ],
     sidebar: {
