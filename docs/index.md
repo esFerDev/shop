@@ -4,7 +4,7 @@ title: Home
 # Hero section
 hero:
   name: esFerDev's Docs
-  text: The official website of documentation of esFerDev's Shop
+  text: Full documentation of our scripts
   image:
     src: /logo.svg
     alt: esFerDev's Shop logo
