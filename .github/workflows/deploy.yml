@@ -1,4 +1,4 @@
-name: Deploy Site
+name: esFerDev Docs
 
 on:
   workflow_dispatch: {}
