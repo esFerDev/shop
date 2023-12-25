@@ -22,7 +22,7 @@ export default {
     ],
     socialLinks: [
       { icon: "github", link: "https://github.com/AndrewR3K/vitepress-boilerplate" },
-      { icon: "discord", link: "..." },
+      { icon: "discord", link: "https://discord.gg/invite/c3ZscGYpZH" },
     ],
     sidebar: {
       "/api/": getSidebar({
@@ -40,7 +40,7 @@ export default {
     },
     footer: {
       message: "Released under the GNU General Public License v2.0.",
-      copyright: "Copyright © 2022-present Vitepress Boilerplate",
+      copyright: "Copyright © 2024-present esFerDev's Docs",
     },
   },
 };
