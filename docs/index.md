@@ -3,31 +3,31 @@ layout: home
 title: Home
 # Hero section
 hero:
-  name: VitePress Boilerplate
-  text: Vite & Vue Powered Static Site Generator
+  name: esFerDev's Docs
+  text: The official website of documentation of esFerDev's Shop
   image:
     src: /logo.svg
-    alt: Vitepress logo
-  tagline: Simple, powerful, and performant. Meet the modern SSG framework you've always wanted.
+    alt: esFerDev's Shop logo
+  tagline: Elevate Your Gameplay with esFerDev's Shop for FiveM and RedM Adventures!
   actions:
     - theme: brand
       text: Get Started
       link: /getstarted
     - theme: alt
-      text: View on GitHub
-      link: https://github.com/AndrewR3K/vitepress-boilerplate
+      text: Visit the store
+      link: https://esferdev.tebex.io/
 
 # Features section
 features:
-  - icon: ⚡️
-    title: Fully static yet still dynamic
-    details: Go wild with true SSG + SPA architecture. Static on page load, but engage users with 100% interactivity from there.
-  - icon: 🎉
-    title: Designed to be simplicity first
-    details: With Markdown-centered content, it's built to help you focus on writing and deployed with minimum configuration.
-  - icon: 🔥
-    title: Power of Vue meets Markdown
-    details: Enhance your content with all the features of Vue in Markdown, while being able to customize your site with Vue.
+  - icon: 🌐
+    title: Easy to Use Everywhere
+    details: Our scripts work smoothly on both FiveM and RedM, making it simple for anyone to enjoy and enhance their gaming adventures.
+  - icon: 🚀
+    title: Stay Updated with the Latest Stuff
+    details: Get scripts with the coolest new features, so your game is always fresh and exciting.
+  - icon: 🤝
+    title: Help When You Need It
+    details: If you ever have questions or issues, our friendly support team is here to make things easy for you.
 
 # Meta property
 head:
@@ -36,13 +36,13 @@ head:
       content: website
   - - meta
     - property: og:title
-      content: Vitepress Boilerplate
+      content: esFerDev's Docs
   - - meta
     - property: og:image
       content: https://codybontecou.com/assets/vite-logo.17e50649.svg
   - - meta
     - name: title
-      content: Vitepress Boilerplate
+      content: esFerDev's Docs
   - - meta
     - name: twitter:card
       content: https://codybontecou.com/assets/vite-logo.17e50649.svg
