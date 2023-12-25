@@ -1,18 +1,18 @@
 import { getSidebar } from "vitepress-plugin-auto-sidebar";
 
 export default {
-  base: "/vitepress-boilerplate/",
-  title: "VitePress Boilerplate",
-  description: "An awesome boilerplate for a simple vitepress site",
+  base: "/shop/",
+  title: "esFerDev's Docs",
+  description: "The official website of documentation of esFerDev's Shop",
   lastUpdated: true,
   cleanUrls: true,
   themeConfig: {
     logo: "/logo.svg",
     editLink: {
-      pattern: "https://github.com/AndrewR3K/vitepress-boilerplate/edit/main/docs/:path",
+      pattern: "https://github.com/esFerDev/shop/edit/main/docs/:path",
       text: "Edit this page on GitHub",
     },
-    siteTitle: "Vitepress Boilerplate",
+    siteTitle: "esFerDev's Docs",
     outline: "deep",
     nav: [
       { text: "Get Started", link: "/getstarted" },
