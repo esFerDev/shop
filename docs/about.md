@@ -8,7 +8,7 @@ We take pride in not only delivering top-notch scripts but also in providing com
 
 Join our [Discord community](https://discord.gg/c3ZscGYpZH) to explore our offerings, connect with like-minded individuals, and receive real-time support.
 
-<p style="color: rgb(135, 255, 23); border: 1px solid rgba(135, 255, 23, 0.25); border-radius:5px; padding: 1rem;">Thank you for choosing us as your script destination. Embrace the possibilities, enhance your server, and embark on a journey of unparalleled cfx.re adventures with our <ins>premium scripts<ins>!</p>
+<p style="color: rgb(135, 255, 23); border: 1px solid rgba(135, 255, 23, 0.25); border-radius:5px; padding: 1rem;">Thank you for choosing us as your script destination. Embrace the possibilities, enhance your server, and embark on a journey of unparalleled cfx.re adventures with our premium scripts!</p>
 
 ---
 
