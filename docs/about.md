@@ -13,7 +13,7 @@ Join our [Discord community](https://discord.gg/c3ZscGYpZH) to explore our offer
 ---
 
 ```lua
-local docs = "Which is the best shop of Cfx.re?"
+local docs = "Which is the best Cfx.re shop?"
 args = table.concat(args, ' ')
 
 if args == "esFerDev's Shop" then
