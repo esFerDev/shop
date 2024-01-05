@@ -21,13 +21,13 @@ This script allows to start a mini-game in which the player will have to pick a 
 ### Export the mini-game
 
 ```lua
-exports['lockpick']:startLockpick(tries, damage)
+exports['esfer_req_lockpick']:startLockpick(tries, damage)
 ```
 
 Usage:
 
 ```lua{1}
-local lockpick = exports['lockpick']:startLockpick()
+local lockpick = exports['esfer_req_lockpick']:startLockpick()
 
 if lockpick then
   print('The has been lockpicked!')
@@ -39,7 +39,7 @@ end
 Or you can adjust the amount of tries and the damage of the lockpick:
 
 ```lua{1}
-local lockpick = exports['lockpick']:startLockpick(3, 10) -- 3: amount of tries. 10: damage of the lockpick.
+local lockpick = exports['esfer_req_lockpick']:startLockpick(3, 10) -- 3: amount of tries. 10: damage of the lockpick.
 
 if lockpick then
   print('The has been lockpicked!')
@@ -108,18 +108,18 @@ This simple script allows us to add a progress bar for any function. In addition
 ### Export the progress bar
 
 ```lua
-exports['progressbar']:Progressbar(text, timeout, options)
+exports['esfer_req_progressbar']:Progressbar(text, timeout, options)
 ```
 
 Usage:
 
 ```lua
 RegisterCommand('testProgressbar', function()
-  exports['progressbar']:Progressbar('Buscando', 20000)
+  exports['esfer_req_progressbar']:Progressbar('Buscando', 20000)
 end)
 
 RegisterCommand('testProgressbar2', function()
-  exports['progressbar']:Progressbar('Buscando', 20000, {
+  exports['esfer_req_progressbar']:Progressbar('Buscando', 20000, {
     FreezePlayer = true,
     animation = {
       type = "anim",
@@ -139,7 +139,7 @@ Scenario:
 
 ```lua{5,6}
 RegisterCommand('testProgressbar2', function()
-  exports['progressbar']:Progressbar('Buscando', 20000, {
+  exports['esfer_req_progressbar']:Progressbar('Buscando', 20000, {
     FreezePlayer = true,
     animation = {
       type = "scenario",
