@@ -179,7 +179,7 @@ Config.BugFurnitures = { -- If a furniture is bugged by the game and it doesn't 
 
 ## 🔔 Update 1.1: *Theft and security*
 
-![Image of the feature of the update 1.1](https://raw.githubusercontent.com/esFerDev/shop/main/docs/public/resources/esfer_properties/feature1-1.png)
+![Image of the feature of the update 1.1](https://raw.githubusercontent.com/esFerDev/shop/main/docs/public/resources/esfer_properties/feature1-1_1.png)
 
 ![Image of the feature of the update 1.1](https://raw.githubusercontent.com/esFerDev/shop/main/docs/public/resources/esfer_properties/feature1-1_2.png)
 
