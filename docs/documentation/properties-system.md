@@ -39,6 +39,7 @@ This resource must be runned with the following scripts:
 
 **`Config.Blips`**:
   - `Activated` Activate or desactivate blips.
+  - `ActivateBlipDelay` How long a player must wait for property blips to appear on the map.
   - `UpdateTime` How often the blips are refreshed.
   - `YellowHouseIfOnSale` Paint the blip yellow if the house is for sale.
   - `BlipOnSale` The blip that will come out if the house is for sale [(see here the blips).](https://github.com/femga/rdr3_discoveries/tree/master/useful_info_from_rpfs/textures/blips)
@@ -60,11 +61,19 @@ This resource must be runned with the following scripts:
 
 `Config.KnockingSoundVolume` The volume at which the knock sound will be played.
 
+`Config.KnockingWait` How many miliseconds must the script wait to reproduce the knocking sound.
+
+`Config.KnockAnimation` The animation played by the player when knocking the door.
+
 `Config.SellPercent` How much percent they will give to the player who sells the property if he sells it to the state.
 
 `Config.LimitInventory` The limit set to the clan's inventory.
 
 `Config.CooldownFixInterior` How much time has to pass before the interior of the property can be refreshed again.
+
+`Config.SafePrice` How much will the safe cost.
+
+`Config.SafeProp` The prop of the safe that will appear when buying one.
 
 **`Config.BreakInSettings`** Options for the robberies.
   - `LockpickItem` The name of the item in the database in order to be able to force lock a property.
@@ -74,14 +83,22 @@ This resource must be runned with the following scripts:
   - `BreakingIntoCooldown` How often a player can steal a property.
   - `LockpickDamage` How much damage the lockpick does in the mini-game [(see more here).](./Requirements-for-my-scripts.md#lockpick).
   - `LockpickAttempts` How many attempts a player has to force the door [(see more here).](./Requirements-for-my-scripts.md#lockpick).
+  - `LockpickingAnimation` The animation played by the player when lockpicking the door.
+  - `SafeCrackerToolNeeded` Is a specific tool needed to open a safe? It is important to remember that the safe will only appear if the property owner has purchased it, otherwise the money will be spread around the property.
+  - `SafeCrackerToolItem` (only if `SafeCrackerToolNeeded`'s option is activated) The item that the player needs to have to open a safe.
+  - `UseSafeCracker` As soon as the player cracks the safe, the item will be removed from his inventory.
   - **Stealing options**:
       - `KeyHash` The key the player must press to steal items and money [(see here the different keys).](https://github.com/mja00/redm-shit/blob/master/nuiweaponspawner/config.lua)
       - `SearchTime` How much time the player has to steal once he enters the door.
       - `Time` How much time the player has to steal once he enters the door (not the same as `BreakIntoPermission`).
       - `Distance` How far the player must be from the steal zone to be able to steal.
+      - `DistanceSafe` How far the player must be from the safe to be able to crack it.
       - `MarkerType` Marker type of the stealing zone [(see marker types here).](https://github.com/femga/rdr3_discoveries/blob/master/graphics/markers/marker_types.lua)
       - `MarkerColor` Marker color of the stealing zone.
       - `MarkerScale` Marker scale of the stealing zone.
+      - `MarkerTypeSafe` Marker type of the zone of the safe [(see marker types here).](https://github.com/femga/rdr3_discoveries/blob/master/graphics/markers/marker_types.lua)
+      - `MarkerColorSafe` Marker color of the zone of the safe.
+      - `MarkerScaleSafe` Marker scale of the zone of the safe.
       - `AnimDict` Anim dict played while stealing.
       - `AnimLib` Anim lib played while stealing.
 
@@ -107,6 +124,8 @@ This file can be found as `config_furniture.lua`.
 `Config.SellPercentFurniture` How much percent the player will be given if he sells a furniture.
 
 `Config.FurnitureLimit` The quantity of furniture a player can have in the property.
+
+`Config.UseLos` To place a piece of furniture the player must have a clear line of sight to the piece of furniture from his position or from the door coordinates.
 
 `Config.EditingModeKeys` The keys the player must press to edit furniture coordinates [(see here the different keys).](https://github.com/mja00/redm-shit/blob/master/nuiweaponspawner/config.lua)
 
@@ -165,5 +184,3 @@ Config.BugFurnitures = { -- If a furniture is bugged by the game and it doesn't 
 ![Image of the feature of the update 1.1](https://raw.githubusercontent.com/esFerDev/shop/main/docs/public/resources/esfer_properties/feature1-1_2.png)
 
 ![Image of the feature of the update 1.1](https://raw.githubusercontent.com/esFerDev/shop/main/docs/public/resources/esfer_properties/feature1-1_3.png)
-
-![Image of the feature of the update 1.1](https://raw.githubusercontent.com/esFerDev/shop/main/docs/public/resources/esfer_properties/feature1-1_4.png)
