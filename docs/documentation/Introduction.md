@@ -54,6 +54,11 @@ Config.AdminPermissions = { -- Specify which ranks have access to the admin menu
 
 Config.MenuAlign = 'bottom-right' -- The align of the VORP menu.
 Config.VorpNotification = 'vorp:TipRight' -- The type of the notification of VORP system.
+
+Config.Exports = {
+    ['pNotify'] = 'pNotify', -- The name of the script of pNotify (progressbar script in the esfer_requirements)
+    ['Progress Bar'] = 'esfer_req_progressbar', -- The name of the script of esfer_req_progressbar (progressbar script in the esfer_requirements)
+}
 ```
 
 **`Config.SystemNotifications`** The system of notifications that the script will use.
@@ -75,6 +80,8 @@ Config.VorpNotification = 'vorp:TipRight' -- The type of the notification of VOR
 
 **`Config.VorpNotification`** Only if `Config.SystemNotifications = 'vorp'`. Where will the VORP notification appear.
 > Types: `vorp:Tip`, `vorp:TipRight`, `vorp:TipBottom`, `vorp:ShowBasicTopNotification`, `vorp:ShowSimpleCenterText` and `vorp:ShowBottomRight`.
+
+`Config.Exports` The name of the scripts of the esfer_requirements. This means that the script will try to use "export" function to call the script by their name, so put the exact name as here.
 
 ### `locales.lua`
 This file contains all messages, notifications and translations into the different languages. By default there will always be two: English and Spanish, which are chosen in the `config.lua` file in the `Config.Locale` option at the top of the file.
