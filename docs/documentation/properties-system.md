@@ -59,6 +59,8 @@ This resource must be runned with the following scripts:
 
 `Config.DistanceTextExit` How far from the gate must you be to exit the property.
 
+`Config.DistanceToLoad` How far from the gae must you be to load all data from properties. This will optimize the script resmon usage.
+
 `Config.KnockingSoundVolume` The volume at which the knock sound will be played.
 
 `Config.KnockingWait` How many miliseconds must the script wait to reproduce the knocking sound.
