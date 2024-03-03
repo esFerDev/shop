@@ -1,4 +1,4 @@
-![Thumbnail](https://raw.githubusercontent.com/esFerDev/shop/main/docs/public/resources/esfer_chat.png)
+![image](https://github.com/esFerDev/shop/assets/58149189/cff65e2a-5817-4f3e-9966-34c551932274)![Thumbnail](https://raw.githubusercontent.com/esFerDev/shop/main/docs/public/resources/esfer_chat.png)
 
 Chat: <Badge type="warning" text="Standalone script" />
 
@@ -119,6 +119,57 @@ And then, change `Config.Framework`:
 Config.Framework = 'vorp' // [!code --]
 Config.Framework = 'customFramework' // [!code ++]
 ```
+
+### How to create your own command
+
+To add your own command to the server, you must create a new script and use server-side files to do that with `esfer_rpchat` support.
+
+To do this, create the server-side file and register a command with some data like `playerName` and `args`. Like this:
+```lua{5-7,14}
+RegisterCommand('COMMANDNAME', function(source, args, rawCommand)
+    args = table.concat(args, ' ')
+    local src = source
+
+    -- (VORP FUNCTION TO GET PLAYER NAME)
+    local User = VorpCore.getUser(src)
+    local playerName = User.getUsedCharacter.firstname .. ' ' .. User.getUsedCharacter.lastname
+
+    -- Check if the player has executed a command with text inside (example: /COMMANDNAME Hello).
+    if args == '' or not args then
+        return
+    end
+
+    TriggerClientEvent('esfer_rpchat:sendProximityMessage', -1, source, ('%s says (combat): %s'):format(playerName, args), {255, 255, 255 --[[ RGB COLOURS ]]}, 15 --[[ RADIUS ]], true --[[AVOID "LOS" FUNCTION]])
+end, false)
+```
+
+Then, you must use a trigger of the `rpchat` script to tell the server to execute that command in our script. There are different triggers for different options, such as executing a command by proximity or globally.
+
+#### Trigger: `esfer_rpchat:sendProximityMessage`
+
+Commands to send by proximity within a certain radius. Example: `/say`, `/me`, `/do`...
+
+```lua
+TriggerClientEvent('esfer_rpchat:sendProximityMessage', -1, source, ('%s makes: %s'):format('Test Test', 'This is a sample text.'), {255, 255, 255}, 15, true)
+```
+
+::: danger 🚨 ARGS
+1. `-1` The players who will receive the message (-1 = global).
+2. `source` The player executing the command (source = player executing the command).
+3. `('%s makes: %s'):format('Test Test', 'This is a sample text.')` The text to be displayed in the chat. `'Test Test'` needs to be replaced by the character name. `args` is the text that the player says after the command (example: "/make `A knot with the rope to hold the wooden board.`").
+4. `{255, 255, 255}` The colour of the command.
+5. `15` The proximity radius. Earlier we mentioned that everyone will get the message, but having this option will make it check that everyone who has received the command is in a radius to receive the command.
+6. `true` Avoid LOS? [(See what is LOS)](#What-is-LOS)
+:::
+
+##### What is LOS?
+
+LOS is a function added by FiveM that can be used also in RedM to checks if entity1 has a clear line of sight to entity2. This means that this function checks if the executor of the command has a clear line of sight to the receptor. If the executor and the receptor has it, then it allows the script to execute the command, if not, the script won't allow the receptor to hear the command.
+
+[(Link 1 - See more reference here)](https://docs.fivem.net/natives/?_0xFCDFF7B72D23A1AC)
+[(Link 2 - See more reference here)](https://github.com/citizenfx/natives/blob/master/ENTITY/HasEntityClearLosToEntity.md)
+
+![Explication of LOS function in FiveM](https://i.imgur.com/ECcQmD4.png)
 
 ## 🔔 Update 1.1: *Custom the chat*
 
