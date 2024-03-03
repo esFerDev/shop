@@ -167,6 +167,7 @@ TriggerClientEvent('esfer_rpchat:sendProximityMessage', -1, source, ('%s makes: 
 LOS is a function added by FiveM that can be used also in RedM to checks if entity1 has a clear line of sight to entity2. This means that this function checks if the executor of the command has a clear line of sight to the receptor. If the executor and the receptor has it, then it allows the script to execute the command, if not, the script won't allow the receptor to hear the command.
 
 [(Link 1 - See more reference here)](https://docs.fivem.net/natives/?_0xFCDFF7B72D23A1AC)
+
 [(Link 2 - See more reference here)](https://github.com/citizenfx/natives/blob/master/ENTITY/HasEntityClearLosToEntity.md)
 
 ![Explication of LOS function in FiveM](https://i.imgur.com/ECcQmD4.png)
