@@ -1,4 +1,4 @@
-![image](https://github.com/esFerDev/shop/assets/58149189/cff65e2a-5817-4f3e-9966-34c551932274)![Thumbnail](https://raw.githubusercontent.com/esFerDev/shop/main/docs/public/resources/esfer_chat.png)
+![Thumbnail](https://raw.githubusercontent.com/esFerDev/shop/main/docs/public/resources/esfer_chat.png)
 
 Chat: <Badge type="warning" text="Standalone script" />
 
@@ -159,7 +159,7 @@ TriggerClientEvent('esfer_rpchat:sendProximityMessage', -1, source, ('%s makes: 
 3. `('%s makes: %s'):format('Test Test', 'This is a sample text.')` The text to be displayed in the chat. `'Test Test'` needs to be replaced by the character name. `args` is the text that the player says after the command (example: "/make `A knot with the rope to hold the wooden board.`").
 4. `{255, 255, 255}` The colour of the command.
 5. `15` The proximity radius. Earlier we mentioned that everyone will get the message, but having this option will make it check that everyone who has received the command is in a radius to receive the command.
-6. `true` Avoid LOS? [(See what is LOS)](#What-is-LOS)
+6. `true` Avoid LOS? [(See what is LOS)](#what-is-los)
 :::
 
 ##### What is LOS?
