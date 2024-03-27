@@ -22,29 +22,30 @@ This resource must be runned with the following scripts:
 [See the basic configs here.](./Introduction.md#config-lua)
 
 `DistanceText` The max. distance you need to be at the mining point to show the text in the chat or in the prompt to mine.
+
 `MaxDistance` The max. distance you need to be from a mine to load the script. This function will let the script sleep if the player is not close enough to a mine.
 
-**`Keys`**: [(See here some keys usable in RedM.)](https://github.com/mja00/redm-shit/blob/master/nuiweaponspawner/config.lua)
-  `StartMineRoute` 
-  `Mine` 
-  `Store` 
+**`Keys`**: [(See here some keys usable in RedM)](https://github.com/mja00/redm-shit/blob/master/nuiweaponspawner/config.lua)
+  - `StartMineRoute` Key pressed to start working on the cave.
+  - `Mine` Key pressed to mine in a checkpoint.
+  - `Store` Key pressed to open the store.
 
 **`GeneralSettings`**:
-  `TimeMinigame` 30 seconds to complete the minigame.
-  `PointsInMinigame` How many points must the player do in the mini-game to exploit the mining zone (every correct click --> Point).
-  `CoolDown` The cooldown set to be abble to start the work again (in minutes).
-  `PickaxeObject` The item spawned on mining.
+  - `TimeMinigame` 30 seconds to complete the minigame.
+  - `PointsInMinigame` How many points must the player do in the mini-game to exploit the mining zone (every correct click --> Point).
+  - `CoolDown` The cooldown set to be abble to start the work again (in minutes).
+  - `PickaxeObject` The item spawned on mining.
 
-  `ItemsRequiredForMining` Items required for mining.
+  - `ItemsRequiredForMining` Items required for mining.
 
-  `Marker`:
-    `Type` [(See here the types of blips)](https://github.com/femga/rdr3_discoveries/blob/master/graphics/markers/marker_types.lua)
-    `Color` The color of the blip.
-    `Scale` The size of the blip.
+  - `Marker`:
+    - `Type` [(See here the types of blips)](https://github.com/femga/rdr3_discoveries/blob/master/graphics/markers/marker_types.lua)
+    - `Color` The color of the blip.
+    - `Scale` The size of the blip.
 
-  `CheckpointsSpriteBlip` Sprite of the blip. [(See here some of them)](https://github.com/femga/rdr3_discoveries/tree/master/useful_info_from_rpfs/textures/blips)
+  - `CheckpointsSpriteBlip` Sprite of the blip. [(See here some of them)](https://github.com/femga/rdr3_discoveries/tree/master/useful_info_from_rpfs/textures/blips)
  
-  `Animation` Animation done by the player when mining.
+  - `Animation` Animation done by the player when mining.
 
 ### Mines section
 
@@ -53,20 +54,24 @@ This configurations are inside a specific cave, this means that all these config
 `activateBlip` Activate the blip of the mine?
 
 Only if blip is activated:
-  `name` The name of the blip.
-  `sprite` Sprite of the blip. [(See here the sprites in the game)](https://github.com/femga/rdr3_discoveries/tree/master/useful_info_from_rpfs/textures/blips)
-  `modifier` Any modifier of the blip. Leave it "nil" if you don't want a modifier. [(See here the modifiers)](https://github.com/femga/rdr3_discoveries/tree/master/useful_info_from_rpfs/blip_modifiers)
+  - `name` The name of the blip.
+  - `sprite` Sprite of the blip. [(See here the sprites in the game)](https://github.com/femga/rdr3_discoveries/tree/master/useful_info_from_rpfs/textures/blips)
+  - `modifier` Any modifier of the blip. Leave it "nil" if you don't want a modifier. [(See here the modifiers)](https://github.com/femga/rdr3_discoveries/tree/master/useful_info_from_rpfs/blip_modifiers)
 
-  (The coords of the blip will be `startPoint.coords`)
+  - (The coords of the blip will be `startPoint.coords`)
 
 `startPoint` The NPC to start the job
-  `coords` Where the NPC is set.
-  `model` The model of the NPC. [(See here different models in the game)](https://www.rdr2mods.com/wiki/peds/)
+  - `coords` Where the NPC is set.
+  - `model` The model of the NPC. [(See here different models in the game)](https://www.rdr2mods.com/wiki/peds/)
 
 `numCheckpoints` The number of checkpoints aviable to work on over the different checkpoints that a cave has. Example: if this settings is set to 9 and the checkpoints aviable are 12, then, the players will only be given 9 checkpoints over the 12 to work on.
+
 `checkpointsItems` How many checkpoints will give item rewards. Ex: from the previous 9 checkpoints, if this setting is set to 7, then 7 of them will give the reward to the player.
+
 `checkPoints` The coords of the different checkpoints aviable in the cave.
+
 `itemsGiven` The rewards. Items given if you are in the correct checkpoint (relation with: `checkpointsItems`).
+
 `itemsGivenFailure` Items given if the player wans't mining in the correct checkpoint (relation with: `checkpointsItems`). Leave this empty if you don't want to give items if failed or bad luck.
 
 ### How to add more caves
@@ -74,7 +79,7 @@ Only if blip is activated:
 To create new caves you will need to do the following:
 
 Take the coordinates at least 10 checkpoints (recommended) inside the cave. Also, get the coords of the start point and get the model of the NPC.
-```lua{9-43}
+```lua{9-52}
 Config.Mines = {
   ...
 
@@ -139,24 +144,24 @@ Config.Mines = {
 `activateBlip` Activate or desactivate the blip of the store.
 
 **`config`**:
-  `name` Name of the store. This will be also the name of the blip if activated.
-  `coords` The coords of the NPC. This will be also the coords of the blip if activated.
-  `model` The model of the NPC. [(See here different models in the game)](https://www.rdr2mods.com/wiki/peds/)
+  - `name` Name of the store. This will be also the name of the blip if activated.
+  - `coords` The coords of the NPC. This will be also the coords of the blip if activated.
+  - `model` The model of the NPC. [(See here different models in the game)](https://www.rdr2mods.com/wiki/peds/)
 
-  (Blip options, only if `activateBlip = true`)
-  `sprite` Sprite of the blip. [(See here the sprites in the game)](https://github.com/femga/rdr3_discoveries/tree/master/useful_info_from_rpfs/textures/blips)
-  `modifier` Any modifier of the blip. Leave it "nil" if you don't want a modifier. [(See here the modifiers)](https://github.com/femga/rdr3_discoveries/tree/master/useful_info_from_rpfs/blip_modifiers)
+  - (Blip options, only if `activateBlip = true`)
+  - `sprite` Sprite of the blip. [(See here the sprites in the game)](https://github.com/femga/rdr3_discoveries/tree/master/useful_info_from_rpfs/textures/blips)
+  - `modifier` Any modifier of the blip. Leave it "nil" if you don't want a modifier. [(See here the modifiers)](https://github.com/femga/rdr3_discoveries/tree/master/useful_info_from_rpfs/blip_modifiers)
 
 **`items`**:
-  Structure of an **item**: `['`Database name`'] = { label = '`Label of the item`', price = `Price of the item` }`
-  Structure of a **weapon**: `['`Database name`'] = { label = '`Label of the weapon`', price = `Price of the weapon`, weapon = true }` [(See here the different weapons in the game. Asset name = Database name)](https://www.rdr2mods.com/wiki/pages/list-of-rdr2-weapon-models/)
+  - Structure of an **item**: `['`Database name`'] = { label = '`Label of the item`', price = `Price of the item` }`
+  - Structure of a **weapon**: `['`Database name`'] = { label = '`Label of the weapon`', price = `Price of the weapon`, weapon = true }` [(See here the different weapons in the game. Asset name = Database name)](https://www.rdr2mods.com/wiki/pages/list-of-rdr2-weapon-models/)
 
 ### How to add more stores
 
 To create new caves you will need to do the following:
 
 Take the coordinates of the NPC. Also, choose a price for every item and the model of the NPC. Then, fill the template.
-```lua{9-19}
+```lua{10-29}
 Config.Interiors = {
   ...
 
