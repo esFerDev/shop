@@ -54,6 +54,7 @@ This configurations are inside a specific cave, this means that all these config
 `activateBlip` Activate the blip of the mine?
 
 Only if blip is activated:
+  - `requiredJob` Required job to work in this mine (leave it blank so that the player doesn't need a specific job to work in this mine)
   - `name` The name of the blip.
   - `sprite` Sprite of the blip. [(See here the sprites in the game)](https://github.com/femga/rdr3_discoveries/tree/master/useful_info_from_rpfs/textures/blips)
   - `modifier` Any modifier of the blip. Leave it "nil" if you don't want a modifier. [(See here the modifiers)](https://github.com/femga/rdr3_discoveries/tree/master/useful_info_from_rpfs/blip_modifiers)
