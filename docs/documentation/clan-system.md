@@ -28,10 +28,44 @@ This resource must be runned with the following scripts:
 
 ## Export functions
 
-<Badge type="warning" text="Client & Server Side" />
+<Badge type="warning" text="Client Side" />
 
-`getCurrentClanName` Get the current clan name where the player is
+`getCurrentClanName` Gets the name of the clan the player is currently in.
+> Example use:
+> ```lua
+> print('Name of the clan: ' .. exports['esfer_clansystem']:getCurrentClanName())
+> ```
+> (Returns `nil` if the player isn't in a clan)
 
-`getCurrentClanId` Get the current clan ID where the player is
+`getCurrentClanId` Takes the ID of the clan the player is currently in.
+> Example use:
+> ```lua
+> print('ID of the clan: ' .. exports['esfer_clansystem']:getCurrentClanId())
+> ```
+> (Returns `nil` if the player isn't in a clan)
 
-`isLeaderFromClan` Returns true if the player is the leader of a clan
+`isLeaderFromClan` Returns whether the player is a clan leader or not.
+> Example use:
+> ```lua
+> print('Is the player leader of the clan?: ' .. tostring(exports['esfer_clansystem']:isLeaderFromClan()))
+> ```
+
+<Badge type="warning" text="Server Side" />
+
+`getCurrentClanName` Gets the name of the clan the player is currently in.
+> Example use:
+> ```lua
+> print('Name of the clan: ' .. exports['esfer_clansystem']:getCurrentClanName(source))
+> ```
+
+`getCurrentClanId` Takes the ID of the clan the player is currently in.
+> Example use:
+> ```lua
+> print('ID of the clan: ' .. exports['esfer_clansystem']:getCurrentClanId(source))
+> ```
+
+`isLeaderFromClan` Returns whether the player is a clan leader or not.
+> Example use:
+> ```lua
+> print('Is the player leader of the clan?: ' .. tostring(exports['esfer_clansystem']:isLeaderFromClan(source)))
+> ```
