@@ -25,3 +25,13 @@ This resource must be runned with the following scripts:
 > [See the list of blips here.](https://github.com/femga/rdr3_discoveries/tree/master/useful_info_from_rpfs/textures/blips)
 
 **`Config.LimitInventory`** The limit set to the clan's inventory.
+
+## Export functions
+
+<Badge type="warning" text="Client & Server Side" />
+
+`getCurrentClanName` Get the current clan name where the player is
+
+`getCurrentClanId` Get the current clan ID where the player is
+
+`isLeaderFromClan` Returns true if the player is the leader of a clan
