@@ -39,9 +39,8 @@ This resource must be runned with the following scripts:
 
 **`Config.Blips`**:
   - `Activated` Activate or desactivate blips.
-  - `ActivateBlipDelay` How long a player must wait for property blips to appear on the map.
-  - `UpdateTime` How often the blips are refreshed.
   - `YellowHouseIfOnSale` Paint the blip yellow if the house is for sale.
+  - `ActivatedOnlyOnSale` Show a blip on every house entry that is on sale (the other ones won't appear in the map). Owners and tenants of the properties will see their own house in the map.
   - `BlipOnSale` The blip that will come out if the house is for sale [(see here the blips).](https://github.com/femga/rdr3_discoveries/tree/master/useful_info_from_rpfs/textures/blips)
   - `BlipBuyed` The blip that will come out if the house is purchased
 
