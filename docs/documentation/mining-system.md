@@ -31,7 +31,8 @@ This resource must be runned with the following scripts:
   - `Store` Key pressed to open the store.
 
 **`GeneralSettings`**:
-  - `TimeMinigame` 30 seconds to complete the minigame.
+  - `MiniGame` Choose between minigame or progress bar.
+  - `Time` 30 seconds to complete the minigame or the progress bar (depending on the "MiniGame" value).
   - `PointsInMinigame` How many points must the player do in the mini-game to exploit the mining zone (every correct click --> Point).
   - `CoolDown` The cooldown set to be abble to start the work again (in minutes).
   - `PickaxeObject` The item spawned on mining.
