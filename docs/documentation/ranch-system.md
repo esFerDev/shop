@@ -50,6 +50,10 @@ This resource must be runned with the following scripts:
 
 `Config.WaitingTime` How long the player will have to feed the different animals.
 
+`Config.AmountOfMilkItems` The amount of milk bricks the player will receive depending on how many points the player has scored in the mini-game.
+
+`Config.AmountOfEggItems` The amount of eggs the player will receive depending on how many times the hens have been fed.
+
 `Config.PriceForLevelsCows` The selling price per cow at each level.
 
 `Config.PriceForLevelsChicken` The selling price per chicken at each level.
