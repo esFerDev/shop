@@ -44,6 +44,8 @@ This resource must be runned with the following scripts:
 
 `Config.LimitInventory` The limit set to the clan's inventory.
 
+`Config.EnableHerding` Enable or disable the option for players to herd their cows.
+
 **`Config.Timeouts`**
 > `feeding`, `milking` and `herding`: How much time has to pass before the player can repeat the action.
 > `deadHens` and `buyCows`: How long does it take for such animals not to be fed before they die?
