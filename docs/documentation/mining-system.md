@@ -34,6 +34,10 @@ This resource must be runned with the following scripts:
   - `MiniGame` Choose between minigame or progress bar.
   - `Time` 30 seconds to complete the minigame or the progress bar (depending on the "MiniGame" value).
   - `PointsInMinigame` How many points must the player do in the mini-game to exploit the mining zone (every correct click --> Point).
+
+  - `EnableMiniGameProbability` The mini-game should appear or not.
+  - `MiniGameProbability` The percentage (%) for the mini-game to appear (0% mini-game won't appear ever - 100% mini-game will always appear).
+
   - `CoolDown` The cooldown set to be abble to start the work again (in minutes).
   - `PickaxeObject` The item spawned on mining.
 
