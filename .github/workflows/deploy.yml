@@ -1,10 +1,10 @@
 name: Deploy Site
 
 on:
-  workflow_dispatch: {}
   push:
-    branches:
-      - main
+    branches: [main]
+  workflow_dispatch:
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -14,22 +14,33 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
           node-version: 16
           cache: npm
-      - run: npm install --frozen-lockfile
-      - name: Build
+
+      - name: Install dependencies
+        run: npm install --frozen-lockfile
+
+      - name: Build VitePress site
         run: npm run docs:build
-      - uses: actions/configure-pages@v2
-      - uses: actions/upload-pages-artifact@v1
-      - uses: actions/upload-artifact@v4
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v2
+
+      - name: Upload artifact for Pages
+        uses: actions/upload-pages-artifact@v1
         with:
           path: docs/.vitepress/dist
-      - name: Deploy
+
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
