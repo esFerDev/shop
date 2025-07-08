@@ -12,6 +12,16 @@ This chat gives the server a classic HeavyRP style to the player-to-player commu
 
 Apart from this wonderful chat system, it includes a command created by us to save the chat logs in order to view them, save them, send them...
 
+## Installing the script
+
+::: danger 🚨 IMPORTANT!
+Sometimes FiveM and RedM servers doesn't allow to install custom chat scripts into new servers. This can be fixed by adding or replacing this line in your server.cfg file.
+:::
+
+```cfg
+set resources_useSystemChat false
+```
+
 ## FiveM preview video
 
 [![Preview video of FiveM](https://raw.githubusercontent.com/esFerDev/shop/main/docs/public/resources/esfer_chat/watch_video_fivem.png)](https://www.youtube.com/watch?v=aRG5HfF6ugQ)
