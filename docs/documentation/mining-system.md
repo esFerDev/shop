@@ -35,6 +35,8 @@ This resource must be runned with the following scripts:
   - `Time` 30 seconds to complete the minigame or the progress bar (depending on the "MiniGame" value).
   - `PointsInMinigame` How many points must the player do in the mini-game to exploit the mining zone (every correct click --> Point).
 
+  - `NPC` Choose if the mining job is started by an NPC or only when approaching the mine.
+
   - `EnableMiniGameProbability` The mini-game should appear or not.
   - `MiniGameProbability` The percentage (%) for the mini-game to appear (0% mini-game won't appear ever - 100% mini-game will always appear).
 
