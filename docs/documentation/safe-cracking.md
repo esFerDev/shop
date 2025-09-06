@@ -96,7 +96,7 @@ RegisterCommand('testSafecracking2', function()
   if safecracking then
     print('You have won. Congratulations!')
   else
-    print('You haven't win. Try again.')
+    print("You haven't win. Try again.")
   end
 end)
 ```
@@ -106,3 +106,4 @@ Arguments:
 | Argument      |   Data type   | Optional | Defualt Value |
 | ------------- | ------------- | -------- | ------------- |
 | options | table | Yes | - |
+
