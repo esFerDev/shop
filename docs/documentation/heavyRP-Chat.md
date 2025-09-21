@@ -50,6 +50,10 @@ set resources_useSystemChat false
 
 `Config.ToggleVisibilityWritingSymbolCommand` Only if `Config.ShowWritingSymbol` is true. Toggle the visibility of the typing indicator.
 
+`Config.ToggleVisibilityAllChatCommand` Command of toggling the visibility of whole chat (writing symbol included).
+
+`Config.ClearChatCommand` Command to clear the chat.
+
 `Config.ZTextOffsetWritingSymbol` The height were the typing indicator will be at.
 
 `Config.CommandChatFontSize` The name of the command to change the size of the font.
@@ -187,3 +191,4 @@ LOS is a function added by FiveM that can be used also in RedM to checks if enti
 ![Image of the feature of the update 1.1](https://raw.githubusercontent.com/esFerDev/shop/main/docs/public/resources/esfer_chat/feature1-1.png)
 
 ![Image of the feature of the update 1.1](https://raw.githubusercontent.com/esFerDev/shop/main/docs/public/resources/esfer_chat/feature1-1_2.png)
+
