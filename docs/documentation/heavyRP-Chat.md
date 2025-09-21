@@ -99,6 +99,32 @@ window.CONFIG = {
 };
 ```
 
+### Trigger: chat:toggleVisibility
+
+To make the chat fade out until the event is triggered again, you'll need to execute this event somewhere in a script.
+
+<Badge type="warning" text="Client Side" />
+```lua
+TriggerEvent('chat:toggleVisibility')
+```
+
+or
+
+```lua
+TriggerEvent('chat:toggleVisibility', true)
+```
+
+<Badge type="warning" text="Server Side" />
+```lua
+TriggerClientEvent('chat:toggleVisibility', source)
+```
+
+or
+
+```lua
+TriggerClientEvent('chat:toggleVisibility', source, true)
+```
+
 ### How to add your own framework
 
 To add support for the chat commands to your own framework or another framework that is not supported by the script by default, you will need to go to the `esfer_rpchat/sv_frameworks.lua` file and make your settings there.
@@ -191,4 +217,5 @@ LOS is a function added by FiveM that can be used also in RedM to checks if enti
 ![Image of the feature of the update 1.1](https://raw.githubusercontent.com/esFerDev/shop/main/docs/public/resources/esfer_chat/feature1-1.png)
 
 ![Image of the feature of the update 1.1](https://raw.githubusercontent.com/esFerDev/shop/main/docs/public/resources/esfer_chat/feature1-1_2.png)
+
 
