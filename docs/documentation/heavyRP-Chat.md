@@ -66,6 +66,8 @@ set resources_useSystemChat false
 
 `Config.Framework` Select the type of framework that your server has.
 
+`Config.CommandToOption` Commands addressed to a player, you can choose between searching for them by their first or last name or by their ID. "name" --> /to Mark Hey!  -  "id" --> /to 3 Hey!
+
 **`Config.Commands`**
 
 In this list are all the available commands, it is important to note that **you cannot add or remove them**, so if you want to add a new one, you can suggest it on the [Discord server.](https://discord.gg/invite/c3ZscGYpZH)
@@ -217,5 +219,6 @@ LOS is a function added by FiveM that can be used also in RedM to checks if enti
 ![Image of the feature of the update 1.1](https://raw.githubusercontent.com/esFerDev/shop/main/docs/public/resources/esfer_chat/feature1-1.png)
 
 ![Image of the feature of the update 1.1](https://raw.githubusercontent.com/esFerDev/shop/main/docs/public/resources/esfer_chat/feature1-1_2.png)
+
 
 
