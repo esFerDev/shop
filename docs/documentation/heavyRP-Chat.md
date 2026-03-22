@@ -68,6 +68,8 @@ set resources_useSystemChat false
 
 `Config.CommandToOption` Commands addressed to a player, you can choose between searching for them by their first or last name or by their ID. "name" --> /to Mark Hey!  -  "id" --> /to 3 Hey!
 
+`Config.ShowDirectMessageIndicator` Shows `[!]` when someone is speaking to you directly.
+
 **`Config.Commands`**
 
 In this list are all the available commands, it is important to note that **you cannot add or remove them**, so if you want to add a new one, you can suggest it on the [Discord server.](https://discord.gg/invite/c3ZscGYpZH)
