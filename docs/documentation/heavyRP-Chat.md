@@ -216,6 +216,103 @@ LOS is a function added by FiveM that can be used also in RedM to checks if enti
 
 ![Explication of LOS function in FiveM](https://i.imgur.com/ECcQmD4.png)
 
+## Chat Event System
+
+Chat Export: <Badge type="warning" text="Server-side event system" />
+
+Type: <Badge type="warning" text="Developer API" />
+
+> ❗ This system allows external resources to listen to every chat message in real time with full structured data.
+
+This system provides a real-time event-based export that allows developers to listen to every chat message sent in the server.
+
+It is designed to integrate advanced systems such as logs, moderation tools, Discord bots, analytics, or custom UI overlays.
+
+### `esfer_rpchat:onMessage`
+
+This event is triggered every time a message is sent in chat.
+
+> ⚠️ This event is **server-side only**.
+
+### Message Structure
+
+Each message follows this unified format:
+
+```lua
+{
+    type = "say" | "me" | "do" | "pm" | "whisper" | "sayto" | "shoutto" | "lowto",
+
+    message = "raw message input",
+    formatted = "formatted chat message",
+
+    from = {
+        id = 1,
+        name = "Character Name",
+        steamName = "Steam Name"
+    },
+
+    to = {
+        id = 2,
+        name = "Target Name",
+        steamName = "Steam Name"
+    } or nil,
+
+    players = {1, 2, 3, 4},
+
+    coords = {
+        x = 0.0,
+        y = 0.0,
+        z = 0.0
+    },
+
+    metadata = {
+        radius = 10.0,
+        language = "en",
+        maskedName = nil
+    }
+}
+```
+
+### Example use
+
+Server-side listener:
+
+```lua
+RegisterNetEvent('esfer_rpchat:onMessage')
+AddEventHandler('esfer_rpchat:onMessage', function(data)
+
+    print("========== CHAT MESSAGE ==========")
+
+    print("Type: " .. tostring(data.type))
+    print("Message: " .. tostring(data.message))
+    print("Formatted: " .. tostring(data.formatted))
+
+    print("From: " .. data.from.name .. " (" .. data.from.id .. ")")
+
+    if data.to then
+        print("To: " .. data.to.name .. " (" .. data.to.id .. ")")
+    else
+        print("To: GLOBAL")
+    end
+
+    print("Players received:")
+
+    for _, id in ipairs(data.players or {}) do
+        print("- " .. id)
+    end
+
+    print("=================================")
+end)
+```
+
+### Optional Export Listener
+
+```lua
+exports['esfer_rpchat']:GetChatMessages(function(data)
+    print(data.formatted)
+end)
+```
+
 ## 🔔 Update 1.1: *Custom the chat*
 
 ![Image of the feature of the update 1.1](https://raw.githubusercontent.com/esFerDev/shop/main/docs/public/resources/esfer_chat/feature1-1.png)
